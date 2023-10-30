@@ -1,0 +1,45 @@
+html, body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    height: 100%;
+    /* background-color: red; */
+    overflow: hidden;
+}
+h3 {
+    color: #333;
+}
+input {
+    padding: 5%;
+    text-align: center;
+    margin-top: 3%;
+}
+button {
+    padding: 2%;
+    margin-top: 5%;
+}
+#problem {
+    font-size: 100%;
+    margin: 1%;
+}
+#feedback {
+    font-size: 18px;
+    margin-top: 10px;
+}
+.container { 
+    height: 100%;
+    position: relative;
+    font-size: 300%;
+    /* border: 3px solid green;  */
+}
+.center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+#hide {
+    opacity: 0.0;
+}
