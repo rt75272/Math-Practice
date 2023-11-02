@@ -2,13 +2,18 @@
 Elementary grade level math practice website for the family teacher
 &nbsp;
 ### Run Locally  
+_Copy repo:_
+```sh
+$ git clone https://github.com/rt75272/Math_Practice.git
+```
+&nbsp;
 _Dependencies:_
 ```sh
 $ sudo apt install php8.1-cli
 $ sudo apt install postgresql
 $ sudo apt install php-pgsql
 ```
-&nbsp;  
+&nbsp;
 _Create local PostgreSQL database table:_
 ###### _Option 1:_
 ```sh
