@@ -1,11 +1,18 @@
-// Enable enter key click
+// Enable enter key click.
 var input = document.getElementById("userAnswer");
 input.addEventListener("keydown", function(event) {
-if (event.key === "Enter") {
-    event.preventDefault();
-    document.getElementById("btn").click();
-}
+    if (event.key === "Enter") {
+        event.preventDefault();
+        document.getElementById("btn").click();
+    }
 });
+
+// Counter function to keep track of the number of questions a user completes.
+var num_completed = 0;
+function countCompleted() {
+    num_completed++;
+    return num_completed;
+}
 
 // Produce a new math problem with random numbers and operator.
 function generateProblem() {
@@ -33,7 +40,6 @@ function checkAnswer() {
     const feedbackElement = document.getElementById('feedback');
     const userAnswer = document.getElementById('userAnswer').value;
 
-    
     const problemText = problemElement.innerText;
     var [num1, operator, num2] = problemText.split(' ');
 
@@ -56,6 +62,8 @@ function checkAnswer() {
         var new_problem = generateProblem();
         problemElement.innerText = new_problem;
         document.getElementById('problem').innerText = new_problem;
+        var score = countCompleted();
+        document.getElementById("score").innerHTML = "Current score: " + score;
     } else {
         feedbackElement.innerText = 'Incorrect. Try again.';
         // document.getElementById("debug").innerHTML = correctAnswer;
