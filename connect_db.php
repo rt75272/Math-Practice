@@ -12,17 +12,4 @@
     } else {
         $connection_status = "Opened database successfully\n";
     }
-
-    // $sql =<<<EOF
-    //     insert into math_user_stats (name)
-    //     VALUES ('jane');
-    // EOF;
-
-    // $ret = pg_query($db, $sql);
-    // if(!$ret) {
-    //     echo pg_last_error($db);
-    // } else {
-    //     echo "Records created successfully\n";
-    // }
-    // pg_close($db);
 ?>

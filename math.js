@@ -64,6 +64,7 @@ function checkAnswer() {
         document.getElementById('problem').innerText = new_problem;
         var score = countCompleted();
         document.getElementById("score").innerHTML = "Current score: " + score;
+        document.getElementById("score").value = score;
     } else {
         feedbackElement.innerText = 'Incorrect. Try again.';
         // document.getElementById("debug").innerHTML = correctAnswer;

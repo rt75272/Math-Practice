@@ -5,11 +5,12 @@
 	$db_receipt = "";
 	$name = "";
 
-	# Insert username to psql database.
+	# Add user's first and last name to the database.
 	if(isset($_POST['save'])) {
-		$name = $_POST['name'];
-		$query = "INSERT INTO math_user_stats(name) values ('$name')";
-		
+		$first_name = $_POST['first_name'];
+		$last_name = $_POST['last_name'];
+		$query = "INSERT INTO math_user_stats(first_name, last_name) values ('$first_name', '$last_name')";
+
 		if($result = pg_query($query)) {
 			$db_receipt = "Data Added Successfully.";
 		}
@@ -17,7 +18,6 @@
 			$db_receipt = "Error.";
 		}
 	}
-
 ?>
 
 <!DOCTYPE html>
@@ -37,16 +37,10 @@
 				<div id="feedback"><span id="hide">hi</span></div>
 
 				<p id="debug"><span id="hide">bye</span></p>
-	<!-- 
-				<form method="post" action="process.php">
-					Name:<br>
-					<input type="text" name="name">
-					<br>
-					<input type="submit" name="save" value="submit">
-				</form> -->
-				<p id="score">Current score: 0</p>
+
+				<p method="post" action="process.php" id="score" name="score">Current score: 0</p>
 				<p id="current_player">
-					<?php echo "<h6><i>Playing as " . $name . "</i></h6>"?>
+					<?php echo "<h6><i>Playing as " . $first_name . " " . $last_name . "</i></h6>"?>
 				</p>
 
 			</div>
